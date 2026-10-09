@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Café La Azotea · web de prueba</title>
+  <link rel="stylesheet" href="estilos.css" />
+</head>
+<body>
+  <header class="cabecera">
+    <a class="marca" href="index.html"><img class="logo" src="img/logo.png" alt="Logotipo de Café La Azotea" width="40" height="40" /> Café La Azotea</a>
+    <nav>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="servicios.html">Carta</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="portada" data-m10-bg="portada" style="background-image: url('img/portada.jpg')">
+      <h1>Café de especialidad con vistas a la ciudad</h1>
+      <p class="entradilla">Tostamos nuestro propio grano cada semana y lo servimos en la terraza más tranquila del barrio.</p>
+      <a class="boton" href="servicios.html">Ver la carta</a>
+    </section>
+
+    <section class="bloque">
+      <h2>Quiénes somos</h2>
+      <p class="quienes">Somos un equipo pequeño &amp; con muchas ganas. Abrimos en 2019 con una idea sencilla: <strong>buen café</strong>, sin prisas.</p>
+      <figure>
+        <img class="equipo" src="img/equipo.jpg" alt="El equipo detrás de la barra" width="800" height="600" />
+        <figcaption>El equipo, un lunes cualquiera.</figcaption>
+      </figure>
+    </section>
+
+    <section id="novedades" class="bloque">
+      <h2>Novedades</h2>
+      <!-- Este bloque lo rellena JavaScript al cargar la página -->
+    </section>
+
+    <section id="contacto" class="bloque">
+      <h2>Contacto</h2>
+      <p>Calle del Ejemplo, 10 · Abierto de martes a domingo.</p>
+      <p class="estado-local">Consultando el horario de hoy…</p>
+      <p class="contacto"><a href="mailto:hola@ejemplo.com">Escríbenos</a> o llámanos al <a href="tel:+34600000000">600 000 000</a>.</p>
+      <button type="button" class="boton">Reservar mesa</button>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="anio">2025</span> Café La Azotea · Web de demostración del modo edición de Mesa 10 Studio</p>
+  </footer>
+
+  <script>
+    // Cosas que la web mete o cambia al cargar. NADA de esto debe acabar en el HTML publicado.
+    document.getElementById('anio').textContent = String(new Date().getFullYear());
+
+    var aviso = document.createElement('section');
+    aviso.className = 'promo';
+    var avisoTexto = document.createElement('p');
+    avisoTexto.textContent = 'Aviso insertado por JavaScript: hoy, 2x1 en cafés de filtro.';
+    aviso.appendChild(avisoTexto);
+    document.querySelector('main').prepend(aviso); // desplaza la posición de todas las secciones
+
+    var articulo = document.createElement('article');
+    var titulo = document.createElement('h3');
+    titulo.textContent = 'Nuevo: tostado de otoño';
+    var parrafo = document.createElement('p');
+    parrafo.textContent = 'Este texto lo inserta JavaScript al cargar la página.';
+    articulo.append(titulo, parrafo);
+    document.getElementById('novedades').appendChild(articulo);
+
+    // Un texto que la web cambia sola un rato después de cargar
+    setTimeout(function () {
+      document.querySelector('.estado-local').textContent = 'Hoy abrimos de 8:00 a 20:00.';
+    }, 1500);
+  </script>
+  <script src="m10-editor.js" defer data-repo="KairoIA/demo-edicion" data-branch="main" data-base="/demo-edicion/" data-dir=""></script>
+</body>
+</html>

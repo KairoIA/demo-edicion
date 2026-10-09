@@ -1,0 +1,31 @@
+/* Web de prueba para el modo edición. Estilo sencillo y responsive. */
+* { box-sizing: border-box; }
+body { margin: 0; font: 17px/1.6 Georgia, "Times New Roman", serif; color: #1d1b19; background: #f6f2ec; }
+img { max-width: 100%; height: auto; display: block; }
+a { color: #3d5f86; }
+
+.cabecera { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; padding: 14px 24px; background: #141414; color: #eaeaeb; }
+.cabecera a { color: #eaeaeb; text-decoration: none; }
+.marca { display: flex; align-items: center; gap: 10px; font-weight: bold; }
+.logo { width: 40px; height: 40px; }
+nav ul { display: flex; gap: 18px; margin: 0; padding: 0; list-style: none; }
+
+.portada { min-height: 62vh; display: flex; flex-direction: column; justify-content: flex-end; gap: 10px; padding: 48px 24px; color: #fff; background-size: cover; background-position: center; }
+.portada h1 { margin: 0; max-width: 18ch; font-size: clamp(2rem, 5vw, 3.4rem); line-height: 1.1; text-shadow: 0 2px 12px rgba(0, 0, 0, .45); }
+.entradilla { margin: 0; max-width: 46ch; font-size: 1.1rem; text-shadow: 0 1px 8px rgba(0, 0, 0, .5); }
+
+.boton { display: inline-block; align-self: flex-start; padding: 10px 18px; border: 0; border-radius: 6px; background: #799bc1; color: #141414; font: inherit; font-weight: bold; text-decoration: none; cursor: pointer; user-select: none; }
+
+.bloque { max-width: 760px; margin: 0 auto; padding: 36px 24px; }
+.bloque h2 { margin-top: 0; }
+figure { margin: 18px 0 0; }
+figcaption { margin-top: 6px; color: #6b645c; font-size: .9rem; }
+
+.promo { background: #e3b26b; padding: 8px 24px; text-align: center; }
+.promo p { margin: 0; }
+
+.carta { width: 100%; border-collapse: collapse; margin: 12px 0 24px; }
+.carta th, .carta td { padding: 8px 10px; border-bottom: 1px solid #d8d0c4; text-align: left; }
+
+footer { padding: 24px; background: #141414; color: #a3a3a8; font-size: .9rem; text-align: center; }
+footer p { margin: 0; }
